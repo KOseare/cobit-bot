@@ -6,11 +6,16 @@
     <title>Test chatbot</title>
 
     <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
-    <div id="dialogBox"></div>
-    <input id="textInput" type="text" />
-    <button id="sendBtn">Enviar</button>
+    <div class="chatInterface">
+        <div id="dialogBox"></div>
+        <div class="chatInput">
+            <input id="textInput" type="text" />
+            <button id="sendBtn">Enviar</button>
+        </div>
+    </div>
     
     <script src="./chat.js"></script>
 </body>
