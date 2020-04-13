@@ -1,0 +1,72 @@
+{
+    "name": "Corpus_Covid",
+    "locale": "es-Es",
+    "data": [
+        {
+            "intent": "covid.sintomas",
+            "utterances": [
+                "Que sintomas tiene el coronavirus?",
+                "Que me puede hacer el covid19",
+                "sintomas del coronavirus?",
+                "¿Que te puede provocar el Covid 19?",
+                "que te causa el Coronavirus?",
+                "que produce el covid-19",
+                "como se si tengo corona virus?",
+                "que sintomas tiene?",
+                "signos del coronavirus",
+                "indicios de que alguien posea covid",
+                "señales de poseer COVID-19"
+            ],
+            "answers": [
+                "Los síntomas más comunes de la COVID-19 son fiebre, cansancio y tos seca. Algunos pacientes pueden presentar dolores, congestión nasal, rinorrea, dolor de garganta o diarrea. Estos síntomas suelen ser leves y aparecen de forma gradual.<br>  Alrededor de 1 de cada 6 personas que contraen la COVID-19 desarrolla una enfermedad grave y tiene dificultad para respirar."
+            ]
+        },
+        {
+            "intent": "covid.propagacion",
+            "utterances": [
+                "como se propaga?",
+                "Como se transmite el covid19",
+                "como se propaga el coronavirus?",
+                "contagio covid 19",
+                "como se esparce el covid-19?",
+                "¿como se esparce el Corona virus?",
+                "propagacion COVID-19"
+            ],
+            "answers": [
+                "Una persona puede contraer la COVID-19 por contacto con otra que esté infectada por el virus. La enfermedad puede propagarse de persona a persona a través de las gotículas procedentes de la nariz o la boca que salen despedidas cuando una persona infectada tose o exhala.<br> Estas gotículas caen sobre los objetos y superficies que rodean a la persona, de modo que otras personas pueden contraer la COVID-19 si tocan estos objetos o superficies y luego se tocan los ojos, la nariz o la boca. "
+            ]
+        },
+        {
+            "intent": "covid.definicion",
+            "utterances": [
+                "que es el covid 19",
+                "Que es el coronavirus?",
+                "que es?",
+                "Definicion covid19",
+                "que es COVID-19"
+            ],
+            "answers": [
+                "La COVID-19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto luego de que que estallara el brote en Wuhan (China) en diciembre de 2019."
+            ]
+        },
+        {
+            "intent": "covid.medidas_precaucion",
+            "utterances": [
+                "como me cuido del covid19?",
+                "Prevenir la propagacion del coronavirus",
+                "medidas de proteccion contra el COVID-19",
+                "Que puedo hacer para no contagiarme de la covid 19?",
+                "como evitar el corona virus?",
+                "consejos para no contagiar el covid-19",
+                "precauciones a tomar para evitar el coronavirus",
+                "cuidados contra el coronavirus?",
+                "que hago para no contraer covid 19?",
+                "precauciones covid19",
+                "medidas coronavirus"
+            ],
+            "answers": [
+                "<br>- Lávese las manos a fondo y con frecuencia usando un desinfectante a base de alcohol o con agua y jabón. <br>- Mantenga una distancia mínima de 1 metro (3 pies) entre usted y cualquier persona que tosa o estornude.<br>- Evite tocarse los ojos, la nariz y la boca. <br><br> Estas son algunas recomendaciones para prevenir la propagacion o contraer la COVID-19."
+            ]
+        }
+    ]
+}

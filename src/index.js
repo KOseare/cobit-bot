@@ -22,7 +22,7 @@ const server = app.listen(app.get("port"), () => {
 (async() =>{
     const dock = await dockStart({ use: ["Basic", "LangEs"] });
     const nlp = dock.get("nlp");
-    await nlp.addCorpus(path.join(__dirname, "lib", "trainData.json"));
+    await nlp.addCorpus(path.join(__dirname, "lib", "trainData_covid19.json"));
     await nlp.train();
 
     socketConnection(server, nlp);

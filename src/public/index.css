@@ -10,7 +10,7 @@ body{
 }
 .chatInterface{
     width: 95%;
-    max-width: 400px;
+    max-width: 600px;
     height: 90vh;
     max-height: 600px;
     margin: auto;
@@ -45,6 +45,7 @@ body{
 }
 #dialogBox .message{
     position: relative;
+    max-width: 80%;
     font-size: 1rem;
     padding: 5px 15px;
     border-radius: 5px;
@@ -52,15 +53,15 @@ body{
 }
 #dialogBox .messageUser{
     align-self: flex-end;
-    border: 1px solid cornflowerblue;
-    color: cornflowerblue;
+    background-color: cornflowerblue;
+    color: white;
     border-top-right-radius: 0px;
 }
 #dialogBox .messageUser::before{
     content: "";
     display: inline-block;
     position: absolute;
-    top: -1px;
+    top: 0px;
     left: 100%;
     border-top: 5px solid cornflowerblue;
     border-bottom: 5px solid transparent;
@@ -70,15 +71,15 @@ body{
 }
 #dialogBox .messageChatbot{
     align-self: flex-start;
-    background-color: cornflowerblue;
-    color: white;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
     border-top-left-radius: 0;
 }
 #dialogBox .messageChatbot::before{
     content: "";
     display: inline-block;
     position: absolute;
-    top: 0px;
+    top: -1px;
     right: 100%;
     border-top: 5px solid cornflowerblue;
     border-bottom: 5px solid transparent;
