@@ -1,0 +1,36 @@
+{
+    "name": "Corpus",
+    "locale": "es-Es",
+    "data": [
+        {
+            "intent": "saludos.hola",
+            "utterances": [
+                "Holaa",
+                "Hola que tal?",
+                "saludos.hola",
+                "Buenas"
+            ] ,
+            "answers": [
+                "Holaa como andas?",
+                "Todo bien?",
+                "Hola, todo bien?",
+                "Buenas"
+            ]
+        },
+        {
+            "intent": "saludos.chau",
+            "utterances": [
+                "Nos vemos",
+                "Chau chau cuidate",
+                "Hasta la proxima",
+                "Me tengo que ir"
+            ] ,
+            "answers": [
+                "Nos vemos!",
+                "Chau, cuidate!",
+                "Chau chau",
+                "Hasta luego"
+            ]
+        }
+    ]
+}

@@ -1,9 +1,9 @@
 const cors = require("cors");
 const path = require("path");
+const fs = require("fs");
 const socketConnection = require("./socketConnection");
 const express = require("express");
-const {NlpManager} = require("node-nlp");
-const trainData = require("./lib/trainData");
+const {dockStart} = require("@nlpjs/basic");
 
 const app = express();
 
@@ -19,19 +19,13 @@ const server = app.listen(app.get("port"), () => {
 });
 
 //Training bot
-const manager = new NlpManager({languages: ["es"]});
-trainData.examples.forEach(example => {
-    manager.addDocument("es", example.text, example.label);
-});
-trainData.answers.forEach(answer => {
-    manager.addAnswer("es", answer.label, answer.text);
-});
-
 (async() =>{
-    await manager.train();
-    manager.save();
+    const dock = await dockStart({ use: ["Basic", "LangEs"] });
+    const nlp = dock.get("nlp");
+    await nlp.addCorpus(path.join(__dirname, "lib", "trainData.json"));
+    await nlp.train();
 
-    socketConnection(server, manager);
+    socketConnection(server, nlp);
 })();
 
 

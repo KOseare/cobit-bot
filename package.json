@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nlpjs/basic": "^4.3.0",
+    "@nlpjs/lang-es": "^4.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "node-nlp": "^4.3.0",
