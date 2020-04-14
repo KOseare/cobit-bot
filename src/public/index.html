@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test chatbot</title>
+    <title>Covid-19 Chatbot</title>
 
     <script src="/socket.io/socket.io.js"></script>
     <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
+    <p class="description">
+        Este es un ChatBot en desarrollo, si quiere información mas detallada 
+        haga <a href="https://www.who.int/es/emergencies/diseases/novel-coronavirus-2019" target="_blank">Click aquí</a>
+    </p>
+
     <div class="chatInterface">
-        <div id="dialogBox"></div>
+        <div id="dialogBox">
+            <div class="messageContainer">
+                <p class="message messageChatbot">
+                    ChatBot: Hola soy un chatbot con información sobre la Covid-19, pregunteme lo que quiera saber sobre el virus.
+                </p>
+            </div>
+        </div>
         <div class="chatInput">
             <input id="textInput" type="text" />
             <button id="sendBtn">Enviar</button>

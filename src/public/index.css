@@ -8,22 +8,33 @@ body{
     font-size: 16px;
     font-family: Verdana;
 }
+
+.description{
+    width: 95%;
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
 .chatInterface{
     width: 95%;
     max-width: 600px;
     height: 90vh;
-    max-height: 600px;
+    max-height: 550px;
     margin: auto;
+    margin-bottom: 30px;
     padding: 10px;
 
     display:flex;
     flex-flow: column nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 #dialogBox{
-    height: 80%;
+    height: 90%;
     width: 100%;
+    margin-bottom: 10px;
     /* border: 1px solid black; */
     box-shadow: 0 2px 5px rgba(0,0,0,.5);
     border-radius: 5px;
