@@ -67,6 +67,37 @@
             "answers": [
                 "<br>- Lávese las manos a fondo y con frecuencia usando un desinfectante a base de alcohol o con agua y jabón. <br>- Mantenga una distancia mínima de 1 metro (3 pies) entre usted y cualquier persona que tosa o estornude.<br>- Evite tocarse los ojos, la nariz y la boca. <br><br> Estas son algunas recomendaciones para prevenir la propagacion o contraer la COVID-19."
             ]
+        },
+        {
+            "intent": "respuesta.afirmativa",
+            "utterances": [
+                "Si",
+                "si",
+                "siii",
+                "SI",
+                "sip",
+                "asi es",
+                "Claro",
+                "quiero",
+                "ok",
+                "OK",
+                "por favor",
+                "si digame"
+            ]
+        },
+        {
+            "intent": "respuesta.negativa",
+            "utterances": [
+                "No",
+                "no",
+                "nooo",
+                "NO",
+                "nop",
+                "no quiero",
+                "no gracias",
+                "me niego",
+                "negativo"
+            ]
         }
     ]
 }
