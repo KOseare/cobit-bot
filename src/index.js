@@ -10,7 +10,7 @@ const app = express();
 //config
 app.set("port", process.env.PORT || 5500);
 app.use(cors());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public", "build")));
 
 
 //start server
