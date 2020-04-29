@@ -1,6 +1,5 @@
 const cors = require("cors");
 const path = require("path");
-const fs = require("fs");
 const socketConnection = require("./socketConnection");
 const express = require("express");
 const {dockStart} = require("@nlpjs/basic");
@@ -11,7 +10,6 @@ const app = express();
 app.set("port", process.env.PORT || 5500);
 app.use(cors());
 app.use(express.static(path.join(__dirname, "public", "build")));
-
 
 //start server
 const server = app.listen(app.get("port"), () => {

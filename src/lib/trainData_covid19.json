@@ -18,7 +18,7 @@
                 "señales de poseer COVID-19"
             ],
             "answers": [
-                "Los síntomas más comunes de la COVID-19 son fiebre, cansancio y tos seca. Algunos pacientes pueden presentar dolores, congestión nasal, rinorrea, dolor de garganta o diarrea. Estos síntomas suelen ser leves y aparecen de forma gradual.<br>  Alrededor de 1 de cada 6 personas que contraen la COVID-19 desarrolla una enfermedad grave y tiene dificultad para respirar."
+                "Los síntomas más comunes de la COVID-19 son fiebre, cansancio y tos seca. Algunos pacientes pueden presentar dolores, congestión nasal, rinorrea, dolor de garganta o diarrea. Estos síntomas suelen ser leves y aparecen de forma gradual.\n  Alrededor de 1 de cada 6 personas que contraen la COVID-19 desarrolla una enfermedad grave y tiene dificultad para respirar."
             ]
         },
         {
@@ -33,7 +33,7 @@
                 "propagacion COVID-19"
             ],
             "answers": [
-                "Una persona puede contraer la COVID-19 por contacto con otra que esté infectada por el virus. La enfermedad puede propagarse de persona a persona a través de las gotículas procedentes de la nariz o la boca que salen despedidas cuando una persona infectada tose o exhala.<br> Estas gotículas caen sobre los objetos y superficies que rodean a la persona, de modo que otras personas pueden contraer la COVID-19 si tocan estos objetos o superficies y luego se tocan los ojos, la nariz o la boca. "
+                "Una persona puede contraer la COVID-19 por contacto con otra que esté infectada por el virus. La enfermedad puede propagarse de persona a persona a través de las gotículas procedentes de la nariz o la boca que salen despedidas cuando una persona infectada tose o exhala.\n Estas gotículas caen sobre los objetos y superficies que rodean a la persona, de modo que otras personas pueden contraer la COVID-19 si tocan estos objetos o superficies y luego se tocan los ojos, la nariz o la boca. "
             ]
         },
         {
@@ -65,14 +65,14 @@
                 "medidas coronavirus"
             ],
             "answers": [
-                "<br>- Lávese las manos a fondo y con frecuencia usando un desinfectante a base de alcohol o con agua y jabón. <br>- Mantenga una distancia mínima de 1 metro (3 pies) entre usted y cualquier persona que tosa o estornude.<br>- Evite tocarse los ojos, la nariz y la boca. <br><br> Estas son algunas recomendaciones para prevenir la propagacion o contraer la COVID-19."
+                "\n- Lávese las manos a fondo y con frecuencia usando un desinfectante a base de alcohol o con agua y jabón. \n- Mantenga una distancia mínima de 1 metro (3 pies) entre usted y cualquier persona que tosa o estornude.\n- Evite tocarse los ojos, la nariz y la boca. \n\n Estas son algunas recomendaciones para prevenir la propagacion o contraer la COVID-19."
             ]
         },
         {
             "intent": "respuesta.afirmativa",
             "utterances": [
                 "Si",
-                "si",
+                "si seguro",
                 "siii",
                 "SI",
                 "sip",
