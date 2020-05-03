@@ -2,7 +2,6 @@ const cors = require("cors");
 const path = require("path");
 const socketConnection = require("./socketConnection");
 const express = require("express");
-const {dockStart} = require("@nlpjs/basic");
 
 const app = express();
 
@@ -16,14 +15,7 @@ const server = app.listen(app.get("port"), () => {
     console.log("Server running on port:", app.get("port"));
 });
 
-//Training bot
-(async() =>{
-    const dock = await dockStart({ use: ["Basic", "LangEs"] });
-    const nlp = dock.get("nlp");
-    await nlp.addCorpus(path.join(__dirname, "lib", "trainData_covid19.json"));
-    await nlp.train();
-
-    socketConnection(server, nlp);
-})();
+//----
+socketConnection(server);
 
 

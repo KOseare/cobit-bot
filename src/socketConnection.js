@@ -1,4 +1,5 @@
 const socketIo = require("socket.io");
+const {getInfoBot} = require("./utils/botTrainer");
 
 const verifyTestStart = (test, botProcess, answers) => {
     if(botProcess.intent === "covid.sintomas"){
@@ -17,26 +18,32 @@ const verifyTestStart = (test, botProcess, answers) => {
     }
 }
 
-module.exports = (server, bot) => {
-    const io = socketIo(server, {origins: "*:*"});
+module.exports = (server) => {
+    getInfoBot().then(bot => {
 
-    io.on("connection", (socket) => {
-        console.log("New connection:", socket.id);
-        const test = {prepare: false, start: false};
+        const io = socketIo(server, {origins: "*:*"});
 
-        socket.on("chat:message", async(data) => {
-            const botProcess = await bot.process("es", data.message);
-            console.log(botProcess);
-            let answers = [botProcess.answer || "No entiendo, por favor reformule su pregunta."]; 
+        io.on("connection", (socket) => {
+            console.log("New connection:", socket.id);
+            const test = {prepare: false, start: false};
 
-            if(!test.start){
-                verifyTestStart(test, botProcess, answers);
-            }
-            if(test.start){
-                answers.push("El test todavía esta en desarrollo, por favor haga otras preguntas.");
-                test.start = false;
-            }
-            socket.emit("chat:message", {messages: answers});
+            socket.on("chat:message", async(data) => {
+                const botProcess = await bot.process("es", data.message);
+                console.log(botProcess);
+                let answers = [botProcess.answer || "No entiendo, por favor reformule su pregunta."]; 
+
+                if(!test.start){
+                    verifyTestStart(test, botProcess, answers);
+                }
+                if(test.start){
+                    answers.push("El test todavía esta en desarrollo, por favor haga otras preguntas.");
+                    test.start = false;
+                }
+                socket.emit("chat:message", {messages: answers});
+            });
         });
-    });
+
+
+    })
+    
 }
