@@ -67,8 +67,17 @@ module.exports = (server) => {
                     socket.emit("chat:test", testData.symptoms[testData.index]);
                 }
                 else{
-                    socket.emit("chat:test", {testEnd: true, covidPercentage: getTestResult(testData)});
-                    sessionData[socket.id].testData = {...testDataTemplate};
+                    const endTestData = {
+                        testEnd: true, 
+                        covidPercentage: getTestResult(testData)
+                    }
+                    if(endTestData.covidPercentage === 100) --endTestData.covidPercentage;
+                    if(endTestData.covidPercentage >= 80){
+                        endTestData.messages = ["Por favor aíslese en su casa e informe de su situación llamando al 107, al 0800-222-1002 o al número de asistencias establecido para su localidad."]
+                    }
+
+                    socket.emit("chat:test", endTestData);
+                    sessionData[socket.id].testData = deeplyObjectCopy(testDataTemplate);
                     test.start = false;
                 }
             })

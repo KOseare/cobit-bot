@@ -2,7 +2,7 @@ module.exports = {
     index: 0,
     symptoms: [{
         name: "Temperatura alta",
-        question: "¿Su temperatura corporal es mayor o igual 37,5°C?",
+        question: "¿Su temperatura corporal es mayor o igual a 37,5°C?",
         options: [{
             description: "Si",
             value: 1
