@@ -7,7 +7,7 @@ const {insertResult} = require("./database/crud/results");
 const {insertLocation} = require("./database/crud/locations");
 
 const verifyTestStart = (test, botProcess, answers) => {
-    if(botProcess.intent === "covid.sintomas"){
+    if(botProcess.intent === "covid.sintomas" || botProcess.intent === "covid.test"){
         answers.push(`Si cree que pudo haber contraído COVID-19, tenemos un test para que pueda saberlo. \n ¿Quiere iniciar el test?`);            
         test.prepare = true;
     }
@@ -47,7 +47,16 @@ module.exports = (server) => {
             socket.on("chat:message", async(data) => {
                 const botProcess = await bot.process("es", data.message);
                 console.log(botProcess);
-                let answers = [botProcess.answer || "No entiendo, por favor reformule su pregunta."]; 
+                let answers = []; 
+                if(!botProcess.answer){
+                    if(botProcess.answer !== ""){
+                        answers.push("No entiendo, por favor reformule su pregunta.");
+                    }
+                }
+                else{
+                    answers.push(botProcess.answer);
+                }
+
 
                 if(!test.start){
                     verifyTestStart(test, botProcess, answers);

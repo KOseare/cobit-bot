@@ -64,6 +64,16 @@
             ]
         },
         {
+            "intent": "covid.test",
+            "utterances": [
+                "test",
+                "prueba",
+                "Hacer el Test",
+                "examen"
+            ],
+            "answers":[""]
+        },
+        {
             "intent": "respuesta.afirmativa",
             "utterances": [
                 "Si",
