@@ -1,3 +1,4 @@
+require("dotenv").config();
 const cors = require("cors");
 const path = require("path");
 const socketConnection = require("./socketConnection");
