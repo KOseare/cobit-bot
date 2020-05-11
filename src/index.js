@@ -2,6 +2,7 @@ const cors = require("cors");
 const path = require("path");
 const socketConnection = require("./socketConnection");
 const express = require("express");
+require("./database/connection");
 
 const app = express();
 

@@ -3,6 +3,9 @@ const {getInfoBot} = require("./utils/botTrainer");
 const testDataTemplate = require("./lib/testDataTemplate");
 const {deeplyObjectCopy} = require("./utils/deeplyCopy");
 
+const {insertResult} = require("./database/crud/results");
+const {insertLocation} = require("./database/crud/locations");
+
 const verifyTestStart = (test, botProcess, answers) => {
     if(botProcess.intent === "covid.sintomas"){
         answers.push(`Si cree que pudo haber contraído COVID-19, tenemos un test para que pueda saberlo. \n ¿Quiere iniciar el test?`);            
@@ -55,7 +58,8 @@ module.exports = (server) => {
                 if(test.start){
                     // answers.push("El test todavía esta en desarrollo, por favor haga otras preguntas.");
                     // test.start = false;
-                    console.log("TESTDATA", JSON.stringify(sessionData, undefined, 2));
+                    console.log("TESTDATA", JSON.stringify(testData, undefined, 2));
+
                     socket.emit("chat:test", testData.symptoms[testData.index]);
                 }
             });
@@ -77,10 +81,36 @@ module.exports = (server) => {
                     }
 
                     socket.emit("chat:test", endTestData);
-                    sessionData[socket.id].testData = deeplyObjectCopy(testDataTemplate);
+
+                    //Saving result-------
+                        const symptoms = sessionData[socket.id].testData.symptoms.map(({name, finalAnswer}) => ({
+                            name,
+                            finalAnswer
+                        }));
+                        insertResult(symptoms, endTestData.covidPercentage)
+                            .then(data => {
+                                console.log("saved", data);
+                                socket.emit("chat:location", {_id: data._id});
+                            })
+                            .catch(err => {
+                                console.log("Error saving result", err);
+                            });
+                    //--------------------
+
+                    testData = deeplyObjectCopy(testDataTemplate);
                     test.start = false;
                 }
             })
+
+            socket.on("chat:location", ({id, lat, long}) => {
+                insertLocation(id, lat, long)
+                    .then(data => {
+                        console.log("saved location", data);
+                    })
+                    .catch(err => {
+                        console.log("error saving location", err);
+                    });
+            });
 
             socket.on("disconnect", () => {
                 delete sessionData[socket.id];
