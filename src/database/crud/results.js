@@ -9,13 +9,8 @@ const insertResult = (symptoms, finalResult) => {
     return result.save();
 }
 
-const getResults = (sessionId) => {
-    const query = {};
-    if(typeof sessionId === "string"){
-        query._id = sessionId;
-    }
-
-    return Result.find(query);
+const getResults = (query, projection) => {
+    return Result.find(query, projection);
 }
 
 module.exports = {insertResult, getResults};
