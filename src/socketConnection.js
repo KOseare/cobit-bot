@@ -33,7 +33,7 @@ const getTestResult = (testData) => {
 module.exports = (server) => {
     getInfoBot().then(bot => {
 
-        const io = socketIo(server, {origins: "*:*"});
+        const io = socketIo(server, {origins: "*:*", cookie: false});
         const sessionData = {};
 
         io.on("connection", (socket) => {

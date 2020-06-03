@@ -19,6 +19,10 @@ app.use(cors({
 app.use(express.static(path.join(__dirname, "public", "build")));
 
 app.get("/data/locations", async(req, res) => {
+    const getRandomNumber = (min, max) => {
+        return +(Math.random() * (max - min) + min).toFixed(4);
+    }
+
     try{
         const locations = await getLocations();
         const results = await getResults({}, {_id: true, finalResult: true});
@@ -30,8 +34,8 @@ app.get("/data/locations", async(req, res) => {
             // location.finalResult = results.splice(iResult, 1)[0].finalResult;
             return {
                 _id: location._id,
-                latitude: location.latitude,
-                longitude: location.longitude,
+                latitude: location.latitude + getRandomNumber(-0.0025, 0.0025),
+                longitude: location.longitude + getRandomNumber(-0.0045, 0.0045),
                 finalResult: results.splice(iResult, 1)[0].finalResult
             };
         });
