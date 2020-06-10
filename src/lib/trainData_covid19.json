@@ -6,6 +6,7 @@
             "intent": "covid.sintomas",
             "utterances": [
                 "Que sintomas tiene?",
+                "cuales son los sintomas?",
                 "Que me puede hacer",
                 "sintomas",
                 "¿Que te puede provocar?",
@@ -14,7 +15,12 @@
                 "como se si lo tengo",
                 "signos",
                 "indicios de que alguien lo posea",
-                "señales de tenerlo"
+                "señales de tenerlo",
+                "estoy enfermo",
+                "me siento mal",
+                "que me hace",
+                "covid 19",
+                "coronavirus"
             ],
             "answers": [
                 "Los síntomas más comunes de la COVID-19 son fiebre, cansancio y tos seca. Algunos pacientes pueden presentar dolores, congestión nasal, rinorrea, dolor de garganta o diarrea. Estos síntomas suelen ser leves y aparecen de forma gradual.\n  Alrededor de 1 de cada 6 personas que contraen la COVID-19 desarrolla una enfermedad grave y tiene dificultad para respirar."
@@ -27,7 +33,12 @@
                 "Como se transmite",
                 "contagio",
                 "como se esparce?",
-                "propagacion"
+                "propagacion",
+                "me puedo contagiar?",
+                "como me puedo infectar?",
+                "transmision",
+                "covid 19",
+                "coronavirus"
             ],
             "answers": [
                 "Una persona puede contraer la COVID-19 por contacto con otra que esté infectada por el virus. La enfermedad puede propagarse de persona a persona a través de las gotículas procedentes de la nariz o la boca que salen despedidas cuando una persona infectada tose o exhala.\n Estas gotículas caen sobre los objetos y superficies que rodean a la persona, de modo que otras personas pueden contraer la COVID-19 si tocan estos objetos o superficies y luego se tocan los ojos, la nariz o la boca. "
@@ -38,7 +49,11 @@
             "utterances": [
                 "que es",
                 "que es?",
-                "Definicion"
+                "Definicion",
+                "covid 19",
+                "coronavirus",
+                "información",
+                "informame"
             ],
             "answers": [
                 "La COVID-19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto luego de que estallara el brote en Wuhan (China) en diciembre de 2019."
@@ -49,6 +64,7 @@
             "utterances": [
                 "como me cuido",
                 "Prevenir su propagacion",
+                "prevencion",
                 "medidas de proteccion contra el",
                 "Que puedo hacer para no contagiarme?",
                 "como evitarlo?",
@@ -57,10 +73,60 @@
                 "cuidados?",
                 "que hago para no contraerla?",
                 "precauciones",
-                "medidas"
+                "medidas",
+                "como evito contagiarme?",
+                "que hacer que no se transmita?",
+                "transmision",
+                "covid 19",
+                "coronavirus"
             ],
             "answers": [
-                "\n- Lávese las manos a fondo y con frecuencia usando un desinfectante a base de alcohol o con agua y jabón. \n- Mantenga una distancia mínima de 1 metro (3 pies) entre usted y cualquier persona que tosa o estornude.\n- Evite tocarse los ojos, la nariz y la boca.\n-Utilice un barbijo si tiene que salir.\n\n Estas son algunas recomendaciones para prevenir la propagacion o contraer la COVID-19."
+                "\n- Lávese las manos a fondo y con frecuencia usando un desinfectante a base de alcohol o con agua y jabón. \n- Mantenga una distancia mínima de 1 metro (3 pies) entre usted y cualquier persona que tosa o estornude.\n- Evite tocarse los ojos, la nariz y la boca.\n-Utilice un barbijo si tiene que salir.\n-Haga una mezcla de 70% de alcohol y 30% agua para desinfectar cosas.\n\n Estas son algunas recomendaciones para prevenir la propagacion o contraer la COVID-19."
+            ]
+        },
+        {
+            "intent": "covid.entretenimiento",
+            "utterances": [
+                "que hacer en la cuarentena?",
+                "como puedo entretenerme estando encerrado?",
+                "que puedo hacer para no aburrirme?",
+                "me aburro",
+                "como entretenerme?",
+                "no se que hacer"
+            ],
+            "answers":[
+                "Es sabido que con la cuarentena, las personas en su mayoría ya no pueden salir de sus casas a recrearse, y por lo tanto, cada vez se quedan con menos maneras de entretenerse. Para evitar esto, aquí hay una lista con diez cosas que podés hacer durante el aislamiento:\n(1) Aprender algo nuevo.\n(2) Hacer ejercicio.\n(3) Planifica cosas que quieras hacer en el futuro.\n(4) Mejora tus habilidades culinarias (con este tiempo libre, que mejor que aprender a cocinar!).\n(5) Leer libros.\n(6) Jugar videojuegos (hay muchas plataformas online que estan regalando juegos por la cuarentena).\n(7) Aprovecha el tiempo para mejorar tus relaciones familiares (ya sea en personas o mediante videollamadas).\n(8) Mirar peliculas o series.\n(9) Practicar tus hobbys.\n(10) Aprovechar el tiempo para acomodar tu casa como vos gustes."
+            ]
+        },
+        {
+            "intent":"covid.aislamiento",
+            "utterances": [
+                "que es la cuarentena?",
+                "cuarentena",
+                "aislamiento",
+                "porque estamos en aislamiento?",
+                "porque hay que cumplir la cuarentena?",
+                "porque hay que estar encerrados?",
+                "que es el aislamiento obligatorio?"
+            ],
+            "answers": [
+                "El aislamiento obligatorio es una medida importante que adoptan las personas con síntomas de COVID‑19 para evitar infectar a otras personas de la comunidad, incluidos sus familiares.\nLa cuarentena por la que estamos transitando es una medida de aislamiento, y es por eso que es importante cumplir con ella. (Hay casos en los que es inevitable tener que salir de nuestras casas, como para trabajar o reabastecerse de alimentos, para eso estan las medidas de prevención)"
+            ]
+        },
+        {
+            "intent": "covid.comunicacion",
+            "utterances": [
+                "creo que lo tengo",
+                "donde comunicarme?",
+                "donde me comunico",
+                "que hago si creo tenerlo?",
+                "numeros de telefono en caso de tener covid",
+                "a quien puedo llamar?",
+                "covid 19",
+                "coronavirus"
+            ],
+            "answers":[
+                "En caso de tener síntomas de Covid-19 debe aislarse como primera medida y luego llame al 148 (Buenos Aires) o al 0800-222-1002 (todo el país) de forma gratuita para atender consultas sobre el coronavirus."
             ]
         },
         {
