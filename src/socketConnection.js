@@ -85,8 +85,14 @@ module.exports = (server) => {
                         covidPercentage: getTestResult(testData)
                     }
                     if(endTestData.covidPercentage === 100) --endTestData.covidPercentage;
-                    if(endTestData.covidPercentage >= 80){
-                        endTestData.messages = ["Por favor aíslese en su casa e informe de su situación llamando al 148 (Buenos Aires), al 0800-222-1002 (todo el país) o al número de asistencias establecido para su localidad."]
+                    if(endTestData.covidPercentage >= 40){
+                        endTestData.messages = ["Por favor aíslese en su casa e informe de su situación llamando al 107 (SAME), 148 (Buenos Aires), al 0800-222-1002 (todo el país) o al número de asistencias establecido para su localidad."]
+                    }
+                    else if(testData.symptoms[0].finalAnswer === 1){
+                        endTestData.messages = [
+                            "Ahora el síntoma de temperatura alta o sospecha de fiebre es tomado como prioritario, así que...",
+                            "Por favor aíslese en su casa e informe de su situación llamando al 107 (SAME), 148 (Buenos Aires), al 0800-222-1002 (todo el país) o al número de asistencias establecido para su localidad."
+                        ]
                     }
 
                     socket.emit("chat:test", endTestData);
