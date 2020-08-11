@@ -5,7 +5,7 @@ module.exports = {
         question: "¿Su temperatura corporal es mayor o igual a 37,5°C?",
         options: [{
             description: "Si",
-            value: 1
+            value: 1.5
         }, {
             description: "No",
             value: 0
@@ -14,6 +14,17 @@ module.exports = {
     }, {
         name: "Tos o dolor de garganta",
         question: "¿Tenés tos o dolor de garganta?",
+        options: [{
+            description: "Si",
+            value: 1
+        }, {
+            description: "No",
+            value: 0
+        }],
+        finalAnswer: null
+    }, {
+        name: "Cefalea",
+        question: "¿Sentís un dolor de cabeza agudo?",
         options: [{
             description: "Si",
             value: 1
@@ -38,7 +49,7 @@ module.exports = {
         question: "¿Te cuesta respirar o sentís que te falta el aire?",
         options: [{
             description: "Si",
-            value: 1
+            value: 1.5
         }, {
             description: "No",
             value: 0
