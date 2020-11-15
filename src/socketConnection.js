@@ -13,10 +13,10 @@ const verifyTestStart = (test, botProcess, answers) => {
     }
     else if(test.prepare){
         if(botProcess.intent === "respuesta.negativa"){
-            answers = ["Bien, si no quiere hacer el test puede seguir haciendome preguntas."];
+            answers[0] = "Bien, si no quiere hacer el test puede seguir haciendome preguntas.";
         }
         else if(botProcess.intent === "respuesta.afirmativa"){
-            answers = ["Bien empezemos."];
+            answers[0] = "Bien empezemos.";
             test.start = true;
         }
         test.prepare = false;
